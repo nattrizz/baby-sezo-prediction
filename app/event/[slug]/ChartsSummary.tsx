@@ -5,7 +5,6 @@ import {
   Bar,
   XAxis,
   YAxis,
-  ZAxis,
   Tooltip,
   ResponsiveContainer,
   CartesianGrid,
@@ -132,7 +131,6 @@ export default function ChartsSummary({
                     name="Weight"
                     unit=" g"
                   />
-                  <ZAxis range={[80]} />
                   <Tooltip cursor={{ strokeDasharray: "3 3" }} />
                   <Scatter data={sizePoints} fill="#4b5563" />
                 </ScatterChart>
