@@ -101,7 +101,7 @@ export default function EventPage({
       setQuestions((questionData as QuestionRow[]) || []);
 
       const alreadySubmitted =
-        sessionStorage.getItem(`${slug}-submitted`) === "true";
+  localStorage.getItem(`${slug}-submitted`) === "true";
       setSubmitted(alreadySubmitted);
 
       if (alreadySubmitted) {
@@ -195,7 +195,7 @@ const answerRows = questions.map((question) => ({
   return;
 }
 
-    sessionStorage.setItem(`${slug}-submitted`, "true");
+    localStorage.setItem(`${slug}-submitted`, "true");
     setSubmitted(true);
     await loadPublicGuesses(eventRow.id);
   }
