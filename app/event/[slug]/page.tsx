@@ -321,6 +321,7 @@ const answerRows = questions.map((question) => ({
           </section>
         ) : (
   <>
+  <ChartsSummary publicAnswers={publicAnswers} />
     <section className="rounded-3xl bg-white p-8 shadow-sm">
       <h2 className="text-2xl font-semibold">Everyone’s guesses</h2>
       <p className="mt-2 text-gray-800">
@@ -347,7 +348,7 @@ const answerRows = questions.map((question) => ({
       </div>
     </section>
 
-    <ChartsSummary publicAnswers={publicAnswers} />
+    
   </>
 )}
       </div>
